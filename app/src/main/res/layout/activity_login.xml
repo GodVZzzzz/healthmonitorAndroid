@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/user_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_marginTop="20dp"
+        android:text="@string/password"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_alignLeft="@+id/user_name"/>
+
+    <EditText
+        android:id="@+id/user_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/user_name"
+        android:layout_alignBaseline="@+id/user_name"
+        android:layout_marginRight="10dp"
+        android:hint="@string/user_account"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:textColor="@color/black">
+        <requestFocus/>
+    </EditText>
+
+    <EditText
+        android:id="@+id/user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/password"
+        android:layout_alignBaseline="@+id/password"
+        android:layout_marginRight="10dp"
+        android:hint="@string/user_password"
+        android:textSize="20sp"
+        android:layout_alignLeft="@+id/user_account"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:inputType="textPassword"/>
+
+    <CheckBox
+        android:id="@+id/remember_password"
+        android:layout_width="23dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/password"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/password" />
+
+    <TextView
+        android:id="@+id/if_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/remember_password"
+        android:textSize="10dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_toRightOf="@+id/remember_password"
+        android:text="@string/remember_password"/>
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/remember_password"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/login"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login"
+        android:layout_centerHorizontal="true"
+        android:text="@string/register"
+        android:background="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_alignLeft="@+id/login"
+        android:layout_alignRight="@id/login"/>
+
+    <Button
+        android:id="@+id/forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_password"
+        android:textSize="10sp"
+        android:layout_alignBottom="@+id/if_remember"
+        android:layout_alignRight="@+id/register"
+        android:gravity="right|bottom"
+        android:background="@color/transparent"
+        android:layout_below="@+id/user_password"
+        android:textColor="@color/colorPrimary"/>
+</RelativeLayout>

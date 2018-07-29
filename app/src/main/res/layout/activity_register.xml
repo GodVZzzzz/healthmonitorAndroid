@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/input_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/edit_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/input_account"
+        android:layout_alignBaseline="@+id/input_account"
+        android:hint="@string/user_account"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginRight="10dp"
+        android:maxLines="1">
+        <requestFocus/>
+    </EditText>
+
+    <TextView
+        android:id="@+id/input_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_alignLeft="@+id/input_account"
+        android:layout_below="@+id/input_account"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/input_password"
+        android:layout_alignBaseline="@+id/input_password"
+        android:hint="@string/user_password"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/password_protect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_protect"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_alignLeft="@+id/input_password"
+        android:layout_below="@+id/input_password"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_protect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/question"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_alignLeft="@+id/password_protect"
+        android:layout_alignRight="@+id/edit_password"
+        android:layout_below="@+id/password_protect"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/input_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/protect_answer"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/edit_protect"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/edit_protect"/>
+
+    <EditText
+        android:id="@+id/edit_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/answer"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_below="@+id/input_answer"
+        android:layout_alignLeft="@+id/input_answer"
+        android:layout_alignRight="@+id/edit_protect"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"/>
+
+    <Button
+        android:id="@+id/submit_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/edit_answer"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/edit_protect"
+        android:layout_alignRight="@+id/edit_protect"/>
+
+</RelativeLayout>
+
